@@ -50,6 +50,7 @@ extern "C" {
 #include <iostream>
 #include <set>
 #include <algorithm>
+#include <list>
 
 extern void OPS_clearAllUniaxialMaterial(void);
 extern void OPS_clearAllNDMaterial(void);
@@ -4648,42 +4649,121 @@ specifyIntegrator(ClientData clientData, Tcl_Interp *interp, int argc,
 	theStaticAnalysis->setIntegrator(*theStaticIntegrator);
   }
 
-  else if (strcmp(argv[1], "EQPath") == 0) {
-		double arcLength;
-		int type;
-		if (argc != 4) {
-			opserr << "WARNING integrator EQPath $arc_length $type \n";
-			opserr << "REFS : \n";
-			opserr << " https://doi.org/10.12989/sem.2013.48.6.849	 \n";
-			opserr << " https://doi.org/10.12989/sem.2013.48.6.879	 \n";
-			return TCL_ERROR;
-		}
+  else if (strcmp(argv[1], "EQPath") == 0 || strcmp(argv[1], "eqpath") == 0) {
+      string commandTemplate = "EQPath $arc_length $type <$gmrdtype [node or element]> <-dofs 1 2 ..> <-tag of elements or nodes for GMRD method>";
+      double arcLength;
+      EQPath_Method type;
+      GMRD_TYPE gmrdType = -1;
+      int numIter;
+      ID* dofs = 0, * ids = 0;
 
-		if (Tcl_GetDouble(interp, argv[2], &arcLength) != TCL_OK)
-		{
-			opserr << "WARNING integrator EQPath $arc_length $type \n";
-			opserr << " https://doi.org/10.12989/sem.2013.48.6.849	 \n";
-			opserr << " https://doi.org/10.12989/sem.2013.48.6.879	 \n";
-			return TCL_ERROR;
-			return TCL_ERROR;
-		}
 
-		if (Tcl_GetInt(interp, argv[3], &type) != TCL_OK)
-		{
-			opserr << "WARNING integrator $arc_length $type \n";
-			opserr << "$type = 1 Minimum Residual Displacement \n";
-			opserr << "$type = 2 Normal Plain \n";
-			opserr << "$type = 3 Update Normal Plain \n";
-			opserr << "$type = 4 Cylindrical Arc-Length \n";
+      auto print_messages = [](std::string message)
+      {
+          opserr << "WARNING integrator EQPath\n";
+          opserr << message.c_str() << endln;
+      };
 
-			return TCL_ERROR;
-		}
+      if (argc < 4) {
+          opserr << "WARNING integrator EQPath\n";
+          opserr << commandTemplate.c_str() << endln;
+          return TCL_ERROR;
+      }
 
-        theStaticIntegrator = 0;// new EQPath(arcLength, type);
 
-		// if the analysis exists - we want to change the Integrator
-		if (theStaticAnalysis != 0)
-			theStaticAnalysis->setIntegrator(*theStaticIntegrator);
+      if (Tcl_GetDouble(interp, argv[2], &arcLength) != TCL_OK)
+      {
+          print_messages(commandTemplate);
+          return TCL_ERROR;
+          return TCL_ERROR;
+      }
+
+      if (Tcl_GetInt(interp, argv[3], &type) != TCL_OK)
+      {
+          print_messages(commandTemplate);
+          // print list of methods
+          return TCL_ERROR;
+      }
+
+      if (type == EQPath_Method_GMRD) {
+          int pos = 4;
+          // gmrd type
+          if (argc <= 4)
+          {
+              print_messages(commandTemplate);
+              opserr << "GMRD Method type not set";
+          }
+
+          if (strcmp(argv[4], "node") == 0)
+              gmrdType = GMRD_TYPE_NODE;
+          else if (strcmp(argv[4], "element") == 0)
+              gmrdType = GMRD_TYPE_ELEMENT;
+          else
+          {
+              print_messages(commandTemplate);
+              return -1;
+          }
+
+          pos = 5;
+          std::list<int> doflist = {};
+          std::list<int> idlist = {};
+          std::list<int>* activeList;
+          while (pos < argc) {
+              if (strcmp(argv[pos], "-dof") == 0)
+              {
+                  activeList = &doflist;
+              }
+              else if (strcmp(argv[pos], "-tags") == 0)
+              {
+                  activeList = &idlist;
+              }
+              else {
+                  int tempInt;
+                  if (Tcl_GetInt(interp, argv[pos], &tempInt) != TCL_OK)
+                  {
+                      print_messages(commandTemplate);
+                      // print list of methods
+                      return TCL_ERROR;
+                  }
+                  else
+                  {
+                      activeList->push_front(tempInt);
+                  }
+              }
+
+              pos++;
+          }
+          if (idlist.size() > 0)
+          {
+              ids = new ID(idlist.size());
+              int index = 0;
+              for (int x : idlist)
+              {
+                  ids->operator[](index) = x;
+                  index++;
+              }
+          }
+
+
+          if (doflist.size() > 0)
+          {
+              dofs = new ID(doflist.size());
+              int index = 0;
+              for (int x : doflist)
+              {
+                  dofs->operator[](index) = x;
+                  index++;
+              }
+          }
+      }
+
+
+
+      theStaticIntegrator = new EQPath(arcLength, type, ids, dofs, gmrdType);
+
+      // if the analysis exists - we want to change the Integrator
+      if (theStaticAnalysis != 0)
+          theStaticAnalysis->setIntegrator(*theStaticIntegrator);
   }	
   
   else if (strcmp(argv[1],"DisplacementControl") == 0) {
