@@ -4679,7 +4679,7 @@ specifyIntegrator(ClientData clientData, Tcl_Interp *interp, int argc,
 			return TCL_ERROR;
 		}
 
-		theStaticIntegrator = new EQPath(arcLength, type);
+        theStaticIntegrator = 0;// new EQPath(arcLength, type);
 
 		// if the analysis exists - we want to change the Integrator
 		if (theStaticAnalysis != 0)
