@@ -1893,7 +1893,7 @@ load 390 0 0 -1e6
 
 
 set tNode 390
-recorder Node -file nodeDisp.txt  -time -node 390 -dof 1 2 3 disp
+
 
 numberer Plain
 
@@ -1901,19 +1901,27 @@ system SparseSPD
 
 constraints Transformation
 
-test NormUnbalance 1e-5 8
+test NormUnbalance 1e-5 8 2
 
 algorithm Newton;
 
-set arc_length 1.0;
 
-#$type = 1 Minimum Residual Disp ;
-#$type = 2 Normal Plain ;
-#$type = 3 Update Normal Plain ;
-#$type = 4 Cylindrical Arc-Length ;
-set type 1;
+#define EQPath_Method_MRD 1 
+#define EQPath_Method_NP 2
+#define EQPath_Method_UNP 3
+#define EQPath_Method_CYL 4
+#define EQPath_Method_MNP 5
+#define EQPath_Method_GDC 6
+#define EQPath_Method_MUNP 7
+#define EQPath_Method_GMRD 9
+#define EQPath_Method_PEP 10
 
-integrator EQPath $arc_length $type
+set arc_length 2.9;
+set type 9;
+
+recorder Node -file dlsd-EMRD-A-node-$tNode.txt  -time -node $tNode -dof 3 disp
+
+integrator EQPath $arc_length $type element -dof 1 2 3 
 
 
 
@@ -1923,9 +1931,15 @@ puts "start"
 
 set i 0;
 set ret 0;
-while {$i<165 && $ret==0} {
+set steps  1200;
+while {$i<$steps && $ret==0} {
 	incr i
 	set ret [analyze 1];
+	if {[nodeDisp 390 3] < -6 || [nodeDisp 390 3] > 0} {
+        puts "reach targe, exit"
+      break
+    }
 }
 
 puts "done"
+remove recorders
