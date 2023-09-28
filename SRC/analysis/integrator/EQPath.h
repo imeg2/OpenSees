@@ -44,19 +44,42 @@
 #define EQPath_h
 
 #include <StaticIntegrator.h>
+#include <map>
+#include <iostream>
+#include <fstream>
 
 class LinearSOE;
 class AnalysisModel;
 class FE_Element;
 class Vector;
+class ID;
+class Node;
+class TaggedObject;
 
 #define SIGN_LAST_STEP      1
 #define CHANGE_DETERMINANT  2
 
+#define GMRD_TYPE int
+#define GMRD_TYPE_NODE 1
+#define GMRD_TYPE_ELEMENT 2
+
+
+#define EQPath_Method int
+#define EQPath_Method_MRD 1 
+#define EQPath_Method_NP 2
+#define EQPath_Method_UNP 3
+#define EQPath_Method_CYL 4
+#define EQPath_Method_MNP 5
+#define EQPath_Method_GDC 6
+#define EQPath_Method_MUNP 7
+#define EQPath_Method_MGDC 8
+#define EQPath_Method_GMRD 9
+#define EQPath_Method_PEP 10
+
 class EQPath : public StaticIntegrator
 {
   public:
-    EQPath(double arcLeng,int type);
+    EQPath(double arcLeng,int type, ID* ids, ID* dofIDs, int gmrdType);
 
     ~EQPath();
 
@@ -74,11 +97,19 @@ class EQPath : public StaticIntegrator
   protected:
     
   private:
-    double arclen,dl,m;
-    double sign;
-    int type,changed,nitr;
-    Vector *du,*du0, *uq, *uq0, *uqn, *ur;
-    Vector *q; 
+      int updateGMRDParameters(Node* nodePtr, Vector* uq, Vector* ur, Vector* uqb, Vector* urb, double* a, double* b);
+      int chooseBestDLambda(double* dlambdas, int count, Vector* du, Vector* uq, Vector* ur);
+      int fillTaggedObjectDic(Domain* theDomain, GMRD_TYPE type, ID* ids);
+      ID* theDofIDs;
+      ID* theIDs;
+      GMRD_TYPE GRMDType;
+    double arclen,dl;
+    double sign_n0; // current sign of increment
+    int type, nitr;
+    Vector* du, * du0, * uq, * uq_n0, * uq_n1, * ur;
+    Vector* q;
+    std::map<int, TaggedObject*> theTaggedObjectDic;
+    int step, iter;
     
 };
 
