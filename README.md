@@ -1,5 +1,5 @@
 # A family of minimum residual displacement methods as nonlinear solution schemes for equilibrium path following in structural mechanics
-# Mostafa Salehi Ahmad-Abad | Ali Maghami | Morteza Ghalishooyan | Ahmad Shooshtari
+Mostafa Salehi Ahmad-Abad | Ali Maghami | Morteza Ghalishooyan | Ahmad Shooshtari
 
 # Abstract
 
