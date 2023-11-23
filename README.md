@@ -1,3 +1,11 @@
+# A family of minimum residual displacement methods as nonlinear solution schemes for equilibrium path following in structural mechanics
+# Mostafa Salehi Ahmad-Abad | Ali Maghami | Morteza Ghalishooyan | Ahmad Shooshtari
+
+# Abstract
+
+In the realm of nonlinear structural mechanics, tracking load-displacement paths becomes intricate when approaching the limits of instability in both load and displacement. These complex scenarios often perplex conventional methodologies,posing challenges in accurately characterizing structural behavior. Over the past decades, multiple initiatives have addressed this intricacy, dating back to the late 1960s. Despite the integration of various algorithms into commercial finite element software, it is essential to acknowledge that no single algorithm universally solves all nonlinear structural problems. Moreover, many existing methods are sensitive to initial parameters like step-length and may struggle with large values. Drawing inspiration from Chan’s concepts of the late 1980s, this study introduces a family of minimum residual displacement methods for tracking equilibrium paths. Our formulation can be seen as a generalized framework that encompasses the existing method as a specific instance. Building on this foundation, we develop and apply straightforward techniques to control residual displacement in nodes, elements, or specific displacement components. This versatile family of methods offers diverse applications. We present a comprehensive library of methods implemented in OpenSees, enabling a comparison between our approach and the conventional minimum residual displacement method, as well as four well-established techniques (cylindrical arclength, generalized displacement, modified generalized displacement, and updated normal plane). We apply these methods to solve five intricate geometrically nonlinear problems involving truss, frame, and shell structures (both isotropic and orthotropic). The results highlight the efficacy and efficiency of our methodologies, emphasizing their advantages in two key domains: their enhanced ability to converge even in
+highly complex behavioral scenarios and their capacity to reduce the required iteration count.
+
 # OpenSees Source Code Repository
 
 This git repository contains all revisions to OpenSees source code since Version 2.3.2.
