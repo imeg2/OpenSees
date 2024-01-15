@@ -860,6 +860,9 @@ int OpenSeesAppInit(Tcl_Interp *interp) {
 		      (ClientData)NULL, (Tcl_CmdDeleteProc *)NULL);     
     Tcl_CreateCommand(interp, "getTime", &getTime,
 		      (ClientData)NULL, (Tcl_CmdDeleteProc *)NULL);
+    Tcl_CreateCommand(interp, "getCurrentIterations", &getCurrentIterations,
+        (ClientData)NULL, (Tcl_CmdDeleteProc*)NULL);
+    
     Tcl_CreateCommand(interp, "getLoadFactor", &getLoadFactor,
 		      (ClientData)NULL, (Tcl_CmdDeleteProc *)NULL);
 		
@@ -1688,6 +1691,22 @@ getTime(ClientData clientData, Tcl_Interp *interp, int argc, TCL_Char **argv)
   //  sprintf(interp->result,format,time);
   Tcl_SetResult(interp, format, TCL_VOLATILE);
   return TCL_OK;
+}
+
+int 
+getCurrentIterations(ClientData clientData, Tcl_Interp *interp, int argc, TCL_Char **argv)
+{
+    int value = 0;
+    if (theTest != 0) {
+        value = theTest->getNumTests();
+    }
+      
+    // get the display format
+    char format[80];
+    sprintf(format, "%d", value);
+  
+    Tcl_SetResult(interp, format, TCL_VOLATILE);
+    return TCL_OK;
 }
 
 int 

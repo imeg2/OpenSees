@@ -1058,6 +1058,9 @@
     <ClCompile Include="..\..\..\SRC\element\mvlem\E_SFI_MVLEM_3D.cpp">
       <Filter>mvlem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\SRC\element\shell\Shell3NNL.cpp">
+      <Filter>shell</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SRC\element\Element.h">
@@ -1857,6 +1860,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\SRC\element\PML\PML2D_12.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SRC\element\shell\Shell3NNL.h">
+      <Filter>shell</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

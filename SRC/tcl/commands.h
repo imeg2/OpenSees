@@ -77,6 +77,9 @@ setTime(ClientData clientData, Tcl_Interp *interp, int argc, TCL_Char **argv);
 int 
 getTime(ClientData clientData, Tcl_Interp *interp, int argc, TCL_Char **argv);
 
+int
+getCurrentIterations(ClientData clientData, Tcl_Interp* interp, int argc, TCL_Char** argv);
+
 int 
 getLoadFactor(ClientData clientData, Tcl_Interp *interp, int argc, TCL_Char **argv);
 

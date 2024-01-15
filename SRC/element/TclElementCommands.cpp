@@ -84,6 +84,7 @@ extern  void *OPS_ComponentElement2d(void);
 extern  void *OPS_ComponentElement3d(void);
 //extern  void *OPS_ComponentElementDamp2d(void);
 extern  void *OPS_TrussElement(void);
+extern  void* OPS_NewShell3NNLElement(void);
 extern  void *OPS_TrussSectionElement(void);
 extern  void *OPS_CorotTrussElement(void);
 extern  void *OPS_CorotTrussSectionElement(void);
@@ -432,7 +433,21 @@ TclModelBuilderElementCommand(ClientData clientData, Tcl_Interp *interp,
       return TCL_ERROR;      
     }
 
-  } else if ((strcmp(argv[1],"trussSection") == 0) || (strcmp(argv[1],"TrussSection") == 0)) {
+  }
+  else if ((strcmp(argv[1], "Shell3NNL") == 0) || (strcmp(argv[1], "Shell3NNL") == 0)) {
+
+      void* theEle = OPS_NewShell3NNLElement();
+      // for backward compatability
+
+      if (theEle != 0)
+          theElement = (Element*)theEle;
+      else {
+          opserr << "TclElementCommand -- unable to create element of type : " << argv[1] << endln;
+          return TCL_ERROR;
+      }
+
+  }
+  else if ((strcmp(argv[1],"trussSection") == 0) || (strcmp(argv[1],"TrussSection") == 0)) {
 
     void *theEle = OPS_TrussSectionElement(); 
     if (theEle != 0) 
