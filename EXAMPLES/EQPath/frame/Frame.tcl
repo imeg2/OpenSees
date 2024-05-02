@@ -84,10 +84,13 @@ algorithm Newton;
 #define EQPath_Method_MUNP 7
 #define EQPath_Method_GMRD 9
 #define EQPath_Method_PEP 10
+#define EQPath_Method_IDC_START 11
+#define EQPath_Method_IDC_STEP 12
+#define EQPath_Method_IDC_ITRATION 13
 
 
-set arc_length 15;
-set type 9;
+set arc_length 10;
+set type 13;
 set error 1e-5;
 
 recorder Node -file node-14-method-$type.rec  -time -node $targetNode -dof 2 disp

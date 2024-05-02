@@ -1,0 +1,671 @@
+wipe;
+model basic -ndm 3 -ndf 6;
+
+node 1 6.0000 0.0000 0
+node 2 6.6667 0.0000 0
+node 3 6.5210 1.3861 0
+node 4 5.8689 1.2475 0
+node 5 7.3333 0.0000 0
+node 6 7.1731 1.5247 0
+node 7 8.0000 0.0000 0
+node 8 7.8252 1.6633 0
+node 9 8.6667 0.0000 0
+node 10 8.4773 1.8019 0
+node 11 9.3333 0.0000 0
+node 12 9.1294 1.9405 0
+node 13 10.0000 0.0000 0
+node 14 9.7815 2.0791 0
+node 15 6.0903 2.7116 0
+node 16 5.4813 2.4404 0
+node 17 6.6993 2.9827 0
+node 18 7.3084 3.2539 0
+node 19 7.9174 3.5251 0
+node 20 8.5264 3.7962 0
+node 21 9.1355 4.0674 0
+node 22 5.3934 3.9186 0
+node 23 4.8541 3.5267 0
+node 24 5.9328 4.3104 0
+node 25 6.4721 4.7023 0
+node 26 7.0115 5.0941 0
+node 27 7.5508 5.4860 0
+node 28 8.0902 5.8779 0
+node 29 4.4609 4.9543 0
+node 30 4.0148 4.4589 0
+node 31 4.9070 5.4497 0
+node 32 5.3530 5.9452 0
+node 33 5.7991 6.4406 0
+node 34 6.2452 6.9360 0
+node 35 6.6913 7.4314 0
+node 36 3.3333 5.7735 0
+node 37 3.0000 5.1962 0
+node 38 3.6667 6.3509 0
+node 39 4.0000 6.9282 0
+node 40 4.3333 7.5056 0
+node 41 4.6667 8.0829 0
+node 42 5.0000 8.6603 0
+node 43 2.0601 6.3404 0
+node 44 1.8541 5.7063 0
+node 45 2.2661 6.9744 0
+node 46 2.4721 7.6085 0
+node 47 2.6781 8.2425 0
+node 48 2.8842 8.8765 0
+node 49 3.0902 9.5106 0
+node 50 0.6969 6.6301 0
+node 51 0.6272 5.9671 0
+node 52 0.7665 7.2932 0
+node 53 0.8362 7.9562 0
+node 54 0.9059 8.6192 0
+node 55 0.9756 9.2822 0
+node 56 1.0453 9.9452 0
+node 57 -0.6969 6.6301 0
+node 58 -0.6272 5.9671 0
+node 59 -0.7665 7.2932 0
+node 60 -0.8362 7.9562 0
+node 61 -0.9059 8.6192 0
+node 62 -0.9756 9.2822 0
+node 63 -1.0453 9.9452 0
+node 64 -2.0601 6.3404 0
+node 65 -1.8541 5.7063 0
+node 66 -2.2661 6.9744 0
+node 67 -2.4721 7.6085 0
+node 68 -2.6781 8.2425 0
+node 69 -2.8842 8.8765 0
+node 70 -3.0902 9.5106 0
+node 71 -3.3333 5.7735 0
+node 72 -3.0000 5.1962 0
+node 73 -3.6667 6.3509 0
+node 74 -4.0000 6.9282 0
+node 75 -4.3333 7.5056 0
+node 76 -4.6667 8.0829 0
+node 77 -5.0000 8.6603 0
+node 78 -4.4609 4.9543 0
+node 79 -4.0148 4.4589 0
+node 80 -4.9070 5.4497 0
+node 81 -5.3530 5.9452 0
+node 82 -5.7991 6.4406 0
+node 83 -6.2452 6.9360 0
+node 84 -6.6913 7.4314 0
+node 85 -5.3934 3.9186 0
+node 86 -4.8541 3.5267 0
+node 87 -5.9328 4.3104 0
+node 88 -6.4721 4.7023 0
+node 89 -7.0115 5.0941 0
+node 90 -7.5508 5.4860 0
+node 91 -8.0902 5.8779 0
+node 92 -6.0903 2.7116 0
+node 93 -5.4813 2.4404 0
+node 94 -6.6993 2.9827 0
+node 95 -7.3084 3.2539 0
+node 96 -7.9174 3.5251 0
+node 97 -8.5264 3.7962 0
+node 98 -9.1355 4.0674 0
+node 99 -6.5210 1.3861 0
+node 100 -5.8689 1.2475 0
+node 101 -7.1731 1.5247 0
+node 102 -7.8252 1.6633 0
+node 103 -8.4773 1.8019 0
+node 104 -9.1294 1.9405 0
+node 105 -9.7815 2.0791 0
+node 106 -6.6667 0.0000 0
+node 107 -6.0000 0.0000 0
+node 108 -7.3333 0.0000 0
+node 109 -8.0000 0.0000 0
+node 110 -8.6667 0.0000 0
+node 111 -9.3333 0.0000 0
+node 112 -10.0000 0.0000 0
+node 113 -6.5210 -1.3861 0
+node 114 -5.8689 -1.2475 0
+node 115 -7.1731 -1.5247 0
+node 116 -7.8252 -1.6633 0
+node 117 -8.4773 -1.8019 0
+node 118 -9.1294 -1.9405 0
+node 119 -9.7815 -2.0791 0
+node 120 -6.0903 -2.7116 0
+node 121 -5.4813 -2.4404 0
+node 122 -6.6993 -2.9827 0
+node 123 -7.3084 -3.2539 0
+node 124 -7.9174 -3.5251 0
+node 125 -8.5264 -3.7962 0
+node 126 -9.1355 -4.0674 0
+node 127 -5.3934 -3.9186 0
+node 128 -4.8541 -3.5267 0
+node 129 -5.9328 -4.3104 0
+node 130 -6.4721 -4.7023 0
+node 131 -7.0115 -5.0941 0
+node 132 -7.5508 -5.4860 0
+node 133 -8.0902 -5.8779 0
+node 134 -4.4609 -4.9543 0
+node 135 -4.0148 -4.4589 0
+node 136 -4.9070 -5.4497 0
+node 137 -5.3530 -5.9452 0
+node 138 -5.7991 -6.4406 0
+node 139 -6.2452 -6.9360 0
+node 140 -6.6913 -7.4314 0
+node 141 -3.3333 -5.7735 0
+node 142 -3.0000 -5.1962 0
+node 143 -3.6667 -6.3509 0
+node 144 -4.0000 -6.9282 0
+node 145 -4.3333 -7.5056 0
+node 146 -4.6667 -8.0829 0
+node 147 -5.0000 -8.6603 0
+node 148 -2.0601 -6.3404 0
+node 149 -1.8541 -5.7063 0
+node 150 -2.2661 -6.9744 0
+node 151 -2.4721 -7.6085 0
+node 152 -2.6781 -8.2425 0
+node 153 -2.8842 -8.8765 0
+node 154 -3.0902 -9.5106 0
+node 155 -0.6969 -6.6301 0
+node 156 -0.6272 -5.9671 0
+node 157 -0.7665 -7.2932 0
+node 158 -0.8362 -7.9562 0
+node 159 -0.9059 -8.6192 0
+node 160 -0.9756 -9.2822 0
+node 161 -1.0453 -9.9452 0
+node 162 0.6969 -6.6301 0
+node 163 0.6272 -5.9671 0
+node 164 0.7665 -7.2932 0
+node 165 0.8362 -7.9562 0
+node 166 0.9059 -8.6192 0
+node 167 0.9756 -9.2822 0
+node 168 1.0453 -9.9452 0
+node 169 2.0601 -6.3404 0
+node 170 1.8541 -5.7063 0
+node 171 2.2661 -6.9744 0
+node 172 2.4721 -7.6085 0
+node 173 2.6781 -8.2425 0
+node 174 2.8842 -8.8765 0
+node 175 3.0902 -9.5106 0
+node 176 3.3333 -5.7735 0
+node 177 3.0000 -5.1962 0
+node 178 3.6667 -6.3509 0
+node 179 4.0000 -6.9282 0
+node 180 4.3333 -7.5056 0
+node 181 4.6667 -8.0829 0
+node 182 5.0000 -8.6603 0
+node 183 4.4609 -4.9543 0
+node 184 4.0148 -4.4589 0
+node 185 4.9070 -5.4497 0
+node 186 5.3530 -5.9452 0
+node 187 5.7991 -6.4406 0
+node 188 6.2452 -6.9360 0
+node 189 6.6913 -7.4314 0
+node 190 5.3934 -3.9186 0
+node 191 4.8541 -3.5267 0
+node 192 5.9328 -4.3104 0
+node 193 6.4721 -4.7023 0
+node 194 7.0115 -5.0941 0
+node 195 7.5508 -5.4860 0
+node 196 8.0902 -5.8779 0
+node 197 6.0903 -2.7116 0
+node 198 5.4813 -2.4404 0
+node 199 6.6993 -2.9827 0
+node 200 7.3084 -3.2539 0
+node 201 7.9174 -3.5251 0
+node 202 8.5264 -3.7962 0
+node 203 9.1355 -4.0674 0
+node 204 6.5210 -1.3861 0
+node 205 5.8689 -1.2475 0
+node 206 7.1731 -1.5247 0
+node 207 7.8252 -1.6633 0
+node 208 8.4773 -1.8019 0
+node 209 9.1294 -1.9405 0
+node 210 9.7815 -2.0791 0
+node 211 6.6667 0.0000 0
+node 212 6.0000 0.0000 0
+node 213 7.3333 0.0000 0
+node 214 8.0000 0.0000 0
+node 215 8.6667 0.0000 0
+node 216 9.3333 0.0000 0
+node 217 10.0000 0.0000 0
+
+
+
+
+
+
+fix 1 1 1 1 1 1 1 
+fix 2 1 1 1 1 1 1 
+fix 5 1 1 1 1 1 1 
+fix 7 1 1 1 1 1 1 
+fix 9 1 1 1 1 1 1 
+fix 11 1 1 1 1 1 1 
+fix 13 1 1 1 1 1 1 
+
+
+set isotropicMat 10
+set section 20
+set th 0.03
+set E 21e6
+set nu 0.0
+set rho 0;
+
+nDMaterial ElasticIsotropic 1 $E $nu
+nDMaterial PlateFiber 2 1
+section PlateFiber $section 2 $th
+
+element ShellNLDKGT	1	1	3	4	 $section
+element ShellNLDKGT	2	1	2	3	 $section
+element ShellNLDKGT	3	2	6	3	 $section
+element ShellNLDKGT	4	2	5	6	 $section
+element ShellNLDKGT	5	5	8	6	 $section
+element ShellNLDKGT	6	5	7	8	 $section
+element ShellNLDKGT	7	7	10	8	 $section
+element ShellNLDKGT	8	7	9	10	 $section
+element ShellNLDKGT	9	9	12	10	 $section
+element ShellNLDKGT	10	9	11	12	 $section
+element ShellNLDKGT	11	11	14	12	 $section
+element ShellNLDKGT	12	11	13	14	 $section
+element ShellNLDKGT	13	4	15	16	 $section
+element ShellNLDKGT	14	4	3	15	 $section
+element ShellNLDKGT	15	3	17	15	 $section
+element ShellNLDKGT	16	3	6	17	 $section
+element ShellNLDKGT	17	6	18	17	 $section
+element ShellNLDKGT	18	6	8	18	 $section
+element ShellNLDKGT	19	8	19	18	 $section
+element ShellNLDKGT	20	8	10	19	 $section
+element ShellNLDKGT	21	10	20	19	 $section
+element ShellNLDKGT	22	10	12	20	 $section
+element ShellNLDKGT	23	12	21	20	 $section
+element ShellNLDKGT	24	12	14	21	 $section
+element ShellNLDKGT	25	16	22	23	 $section
+element ShellNLDKGT	26	16	15	22	 $section
+element ShellNLDKGT	27	15	24	22	 $section
+element ShellNLDKGT	28	15	17	24	 $section
+element ShellNLDKGT	29	17	25	24	 $section
+element ShellNLDKGT	30	17	18	25	 $section
+element ShellNLDKGT	31	18	26	25	 $section
+element ShellNLDKGT	32	18	19	26	 $section
+element ShellNLDKGT	33	19	27	26	 $section
+element ShellNLDKGT	34	19	20	27	 $section
+element ShellNLDKGT	35	20	28	27	 $section
+element ShellNLDKGT	36	20	21	28	 $section
+element ShellNLDKGT	37	23	29	30	 $section
+element ShellNLDKGT	38	23	22	29	 $section
+element ShellNLDKGT	39	22	31	29	 $section
+element ShellNLDKGT	40	22	24	31	 $section
+element ShellNLDKGT	41	24	32	31	 $section
+element ShellNLDKGT	42	24	25	32	 $section
+element ShellNLDKGT	43	25	33	32	 $section
+element ShellNLDKGT	44	25	26	33	 $section
+element ShellNLDKGT	45	26	34	33	 $section
+element ShellNLDKGT	46	26	27	34	 $section
+element ShellNLDKGT	47	27	35	34	 $section
+element ShellNLDKGT	48	27	28	35	 $section
+element ShellNLDKGT	49	30	36	37	 $section
+element ShellNLDKGT	50	30	29	36	 $section
+element ShellNLDKGT	51	29	38	36	 $section
+element ShellNLDKGT	52	29	31	38	 $section
+element ShellNLDKGT	53	31	39	38	 $section
+element ShellNLDKGT	54	31	32	39	 $section
+element ShellNLDKGT	55	32	40	39	 $section
+element ShellNLDKGT	56	32	33	40	 $section
+element ShellNLDKGT	57	33	41	40	 $section
+element ShellNLDKGT	58	33	34	41	 $section
+element ShellNLDKGT	59	34	42	41	 $section
+element ShellNLDKGT	60	34	35	42	 $section
+element ShellNLDKGT	61	37	43	44	 $section
+element ShellNLDKGT	62	37	36	43	 $section
+element ShellNLDKGT	63	36	45	43	 $section
+element ShellNLDKGT	64	36	38	45	 $section
+element ShellNLDKGT	65	38	46	45	 $section
+element ShellNLDKGT	66	38	39	46	 $section
+element ShellNLDKGT	67	39	47	46	 $section
+element ShellNLDKGT	68	39	40	47	 $section
+element ShellNLDKGT	69	40	48	47	 $section
+element ShellNLDKGT	70	40	41	48	 $section
+element ShellNLDKGT	71	41	49	48	 $section
+element ShellNLDKGT	72	41	42	49	 $section
+element ShellNLDKGT	73	44	50	51	 $section
+element ShellNLDKGT	74	44	43	50	 $section
+element ShellNLDKGT	75	43	52	50	 $section
+element ShellNLDKGT	76	43	45	52	 $section
+element ShellNLDKGT	77	45	53	52	 $section
+element ShellNLDKGT	78	45	46	53	 $section
+element ShellNLDKGT	79	46	54	53	 $section
+element ShellNLDKGT	80	46	47	54	 $section
+element ShellNLDKGT	81	47	55	54	 $section
+element ShellNLDKGT	82	47	48	55	 $section
+element ShellNLDKGT	83	48	56	55	 $section
+element ShellNLDKGT	84	48	49	56	 $section
+element ShellNLDKGT	85	51	57	58	 $section
+element ShellNLDKGT	86	51	50	57	 $section
+element ShellNLDKGT	87	50	59	57	 $section
+element ShellNLDKGT	88	50	52	59	 $section
+element ShellNLDKGT	89	52	60	59	 $section
+element ShellNLDKGT	90	52	53	60	 $section
+element ShellNLDKGT	91	53	61	60	 $section
+element ShellNLDKGT	92	53	54	61	 $section
+element ShellNLDKGT	93	54	62	61	 $section
+element ShellNLDKGT	94	54	55	62	 $section
+element ShellNLDKGT	95	55	63	62	 $section
+element ShellNLDKGT	96	55	56	63	 $section
+element ShellNLDKGT	97	58	64	65	 $section
+element ShellNLDKGT	98	58	57	64	 $section
+element ShellNLDKGT	99	57	66	64	 $section
+element ShellNLDKGT	100	57	59	66	 $section
+element ShellNLDKGT	101	59	67	66	 $section
+element ShellNLDKGT	102	59	60	67	 $section
+element ShellNLDKGT	103	60	68	67	 $section
+element ShellNLDKGT	104	60	61	68	 $section
+element ShellNLDKGT	105	61	69	68	 $section
+element ShellNLDKGT	106	61	62	69	 $section
+element ShellNLDKGT	107	62	70	69	 $section
+element ShellNLDKGT	108	62	63	70	 $section
+element ShellNLDKGT	109	65	71	72	 $section
+element ShellNLDKGT	110	65	64	71	 $section
+element ShellNLDKGT	111	64	73	71	 $section
+element ShellNLDKGT	112	64	66	73	 $section
+element ShellNLDKGT	113	66	74	73	 $section
+element ShellNLDKGT	114	66	67	74	 $section
+element ShellNLDKGT	115	67	75	74	 $section
+element ShellNLDKGT	116	67	68	75	 $section
+element ShellNLDKGT	117	68	76	75	 $section
+element ShellNLDKGT	118	68	69	76	 $section
+element ShellNLDKGT	119	69	77	76	 $section
+element ShellNLDKGT	120	69	70	77	 $section
+element ShellNLDKGT	121	72	78	79	 $section
+element ShellNLDKGT	122	72	71	78	 $section
+element ShellNLDKGT	123	71	80	78	 $section
+element ShellNLDKGT	124	71	73	80	 $section
+element ShellNLDKGT	125	73	81	80	 $section
+element ShellNLDKGT	126	73	74	81	 $section
+element ShellNLDKGT	127	74	82	81	 $section
+element ShellNLDKGT	128	74	75	82	 $section
+element ShellNLDKGT	129	75	83	82	 $section
+element ShellNLDKGT	130	75	76	83	 $section
+element ShellNLDKGT	131	76	84	83	 $section
+element ShellNLDKGT	132	76	77	84	 $section
+element ShellNLDKGT	133	79	85	86	 $section
+element ShellNLDKGT	134	79	78	85	 $section
+element ShellNLDKGT	135	78	87	85	 $section
+element ShellNLDKGT	136	78	80	87	 $section
+element ShellNLDKGT	137	80	88	87	 $section
+element ShellNLDKGT	138	80	81	88	 $section
+element ShellNLDKGT	139	81	89	88	 $section
+element ShellNLDKGT	140	81	82	89	 $section
+element ShellNLDKGT	141	82	90	89	 $section
+element ShellNLDKGT	142	82	83	90	 $section
+element ShellNLDKGT	143	83	91	90	 $section
+element ShellNLDKGT	144	83	84	91	 $section
+element ShellNLDKGT	145	86	92	93	 $section
+element ShellNLDKGT	146	86	85	92	 $section
+element ShellNLDKGT	147	85	94	92	 $section
+element ShellNLDKGT	148	85	87	94	 $section
+element ShellNLDKGT	149	87	95	94	 $section
+element ShellNLDKGT	150	87	88	95	 $section
+element ShellNLDKGT	151	88	96	95	 $section
+element ShellNLDKGT	152	88	89	96	 $section
+element ShellNLDKGT	153	89	97	96	 $section
+element ShellNLDKGT	154	89	90	97	 $section
+element ShellNLDKGT	155	90	98	97	 $section
+element ShellNLDKGT	156	90	91	98	 $section
+element ShellNLDKGT	157	93	99	100	 $section
+element ShellNLDKGT	158	93	92	99	 $section
+element ShellNLDKGT	159	92	101	99	 $section
+element ShellNLDKGT	160	92	94	101	 $section
+element ShellNLDKGT	161	94	102	101	 $section
+element ShellNLDKGT	162	94	95	102	 $section
+element ShellNLDKGT	163	95	103	102	 $section
+element ShellNLDKGT	164	95	96	103	 $section
+element ShellNLDKGT	165	96	104	103	 $section
+element ShellNLDKGT	166	96	97	104	 $section
+element ShellNLDKGT	167	97	105	104	 $section
+element ShellNLDKGT	168	97	98	105	 $section
+element ShellNLDKGT	169	100	106	107	 $section
+element ShellNLDKGT	170	100	99	106	 $section
+element ShellNLDKGT	171	99	108	106	 $section
+element ShellNLDKGT	172	99	101	108	 $section
+element ShellNLDKGT	173	101	109	108	 $section
+element ShellNLDKGT	174	101	102	109	 $section
+element ShellNLDKGT	175	102	110	109	 $section
+element ShellNLDKGT	176	102	103	110	 $section
+element ShellNLDKGT	177	103	111	110	 $section
+element ShellNLDKGT	178	103	104	111	 $section
+element ShellNLDKGT	179	104	112	111	 $section
+element ShellNLDKGT	180	104	105	112	 $section
+element ShellNLDKGT	181	107	113	114	 $section
+element ShellNLDKGT	182	107	106	113	 $section
+element ShellNLDKGT	183	106	115	113	 $section
+element ShellNLDKGT	184	106	108	115	 $section
+element ShellNLDKGT	185	108	116	115	 $section
+element ShellNLDKGT	186	108	109	116	 $section
+element ShellNLDKGT	187	109	117	116	 $section
+element ShellNLDKGT	188	109	110	117	 $section
+element ShellNLDKGT	189	110	118	117	 $section
+element ShellNLDKGT	190	110	111	118	 $section
+element ShellNLDKGT	191	111	119	118	 $section
+element ShellNLDKGT	192	111	112	119	 $section
+element ShellNLDKGT	193	114	120	121	 $section
+element ShellNLDKGT	194	114	113	120	 $section
+element ShellNLDKGT	195	113	122	120	 $section
+element ShellNLDKGT	196	113	115	122	 $section
+element ShellNLDKGT	197	115	123	122	 $section
+element ShellNLDKGT	198	115	116	123	 $section
+element ShellNLDKGT	199	116	124	123	 $section
+element ShellNLDKGT	200	116	117	124	 $section
+element ShellNLDKGT	201	117	125	124	 $section
+element ShellNLDKGT	202	117	118	125	 $section
+element ShellNLDKGT	203	118	126	125	 $section
+element ShellNLDKGT	204	118	119	126	 $section
+element ShellNLDKGT	205	121	127	128	 $section
+element ShellNLDKGT	206	121	120	127	 $section
+element ShellNLDKGT	207	120	129	127	 $section
+element ShellNLDKGT	208	120	122	129	 $section
+element ShellNLDKGT	209	122	130	129	 $section
+element ShellNLDKGT	210	122	123	130	 $section
+element ShellNLDKGT	211	123	131	130	 $section
+element ShellNLDKGT	212	123	124	131	 $section
+element ShellNLDKGT	213	124	132	131	 $section
+element ShellNLDKGT	214	124	125	132	 $section
+element ShellNLDKGT	215	125	133	132	 $section
+element ShellNLDKGT	216	125	126	133	 $section
+element ShellNLDKGT	217	128	134	135	 $section
+element ShellNLDKGT	218	128	127	134	 $section
+element ShellNLDKGT	219	127	136	134	 $section
+element ShellNLDKGT	220	127	129	136	 $section
+element ShellNLDKGT	221	129	137	136	 $section
+element ShellNLDKGT	222	129	130	137	 $section
+element ShellNLDKGT	223	130	138	137	 $section
+element ShellNLDKGT	224	130	131	138	 $section
+element ShellNLDKGT	225	131	139	138	 $section
+element ShellNLDKGT	226	131	132	139	 $section
+element ShellNLDKGT	227	132	140	139	 $section
+element ShellNLDKGT	228	132	133	140	 $section
+element ShellNLDKGT	229	135	141	142	 $section
+element ShellNLDKGT	230	135	134	141	 $section
+element ShellNLDKGT	231	134	143	141	 $section
+element ShellNLDKGT	232	134	136	143	 $section
+element ShellNLDKGT	233	136	144	143	 $section
+element ShellNLDKGT	234	136	137	144	 $section
+element ShellNLDKGT	235	137	145	144	 $section
+element ShellNLDKGT	236	137	138	145	 $section
+element ShellNLDKGT	237	138	146	145	 $section
+element ShellNLDKGT	238	138	139	146	 $section
+element ShellNLDKGT	239	139	147	146	 $section
+element ShellNLDKGT	240	139	140	147	 $section
+element ShellNLDKGT	241	142	148	149	 $section
+element ShellNLDKGT	242	142	141	148	 $section
+element ShellNLDKGT	243	141	150	148	 $section
+element ShellNLDKGT	244	141	143	150	 $section
+element ShellNLDKGT	245	143	151	150	 $section
+element ShellNLDKGT	246	143	144	151	 $section
+element ShellNLDKGT	247	144	152	151	 $section
+element ShellNLDKGT	248	144	145	152	 $section
+element ShellNLDKGT	249	145	153	152	 $section
+element ShellNLDKGT	250	145	146	153	 $section
+element ShellNLDKGT	251	146	154	153	 $section
+element ShellNLDKGT	252	146	147	154	 $section
+element ShellNLDKGT	253	149	155	156	 $section
+element ShellNLDKGT	254	149	148	155	 $section
+element ShellNLDKGT	255	148	157	155	 $section
+element ShellNLDKGT	256	148	150	157	 $section
+element ShellNLDKGT	257	150	158	157	 $section
+element ShellNLDKGT	258	150	151	158	 $section
+element ShellNLDKGT	259	151	159	158	 $section
+element ShellNLDKGT	260	151	152	159	 $section
+element ShellNLDKGT	261	152	160	159	 $section
+element ShellNLDKGT	262	152	153	160	 $section
+element ShellNLDKGT	263	153	161	160	 $section
+element ShellNLDKGT	264	153	154	161	 $section
+element ShellNLDKGT	265	156	162	163	 $section
+element ShellNLDKGT	266	156	155	162	 $section
+element ShellNLDKGT	267	155	164	162	 $section
+element ShellNLDKGT	268	155	157	164	 $section
+element ShellNLDKGT	269	157	165	164	 $section
+element ShellNLDKGT	270	157	158	165	 $section
+element ShellNLDKGT	271	158	166	165	 $section
+element ShellNLDKGT	272	158	159	166	 $section
+element ShellNLDKGT	273	159	167	166	 $section
+element ShellNLDKGT	274	159	160	167	 $section
+element ShellNLDKGT	275	160	168	167	 $section
+element ShellNLDKGT	276	160	161	168	 $section
+element ShellNLDKGT	277	163	169	170	 $section
+element ShellNLDKGT	278	163	162	169	 $section
+element ShellNLDKGT	279	162	171	169	 $section
+element ShellNLDKGT	280	162	164	171	 $section
+element ShellNLDKGT	281	164	172	171	 $section
+element ShellNLDKGT	282	164	165	172	 $section
+element ShellNLDKGT	283	165	173	172	 $section
+element ShellNLDKGT	284	165	166	173	 $section
+element ShellNLDKGT	285	166	174	173	 $section
+element ShellNLDKGT	286	166	167	174	 $section
+element ShellNLDKGT	287	167	175	174	 $section
+element ShellNLDKGT	288	167	168	175	 $section
+element ShellNLDKGT	289	170	176	177	 $section
+element ShellNLDKGT	290	170	169	176	 $section
+element ShellNLDKGT	291	169	178	176	 $section
+element ShellNLDKGT	292	169	171	178	 $section
+element ShellNLDKGT	293	171	179	178	 $section
+element ShellNLDKGT	294	171	172	179	 $section
+element ShellNLDKGT	295	172	180	179	 $section
+element ShellNLDKGT	296	172	173	180	 $section
+element ShellNLDKGT	297	173	181	180	 $section
+element ShellNLDKGT	298	173	174	181	 $section
+element ShellNLDKGT	299	174	182	181	 $section
+element ShellNLDKGT	300	174	175	182	 $section
+element ShellNLDKGT	301	177	183	184	 $section
+element ShellNLDKGT	302	177	176	183	 $section
+element ShellNLDKGT	303	176	185	183	 $section
+element ShellNLDKGT	304	176	178	185	 $section
+element ShellNLDKGT	305	178	186	185	 $section
+element ShellNLDKGT	306	178	179	186	 $section
+element ShellNLDKGT	307	179	187	186	 $section
+element ShellNLDKGT	308	179	180	187	 $section
+element ShellNLDKGT	309	180	188	187	 $section
+element ShellNLDKGT	310	180	181	188	 $section
+element ShellNLDKGT	311	181	189	188	 $section
+element ShellNLDKGT	312	181	182	189	 $section
+element ShellNLDKGT	313	184	190	191	 $section
+element ShellNLDKGT	314	184	183	190	 $section
+element ShellNLDKGT	315	183	192	190	 $section
+element ShellNLDKGT	316	183	185	192	 $section
+element ShellNLDKGT	317	185	193	192	 $section
+element ShellNLDKGT	318	185	186	193	 $section
+element ShellNLDKGT	319	186	194	193	 $section
+element ShellNLDKGT	320	186	187	194	 $section
+element ShellNLDKGT	321	187	195	194	 $section
+element ShellNLDKGT	322	187	188	195	 $section
+element ShellNLDKGT	323	188	196	195	 $section
+element ShellNLDKGT	324	188	189	196	 $section
+element ShellNLDKGT	325	191	197	198	 $section
+element ShellNLDKGT	326	191	190	197	 $section
+element ShellNLDKGT	327	190	199	197	 $section
+element ShellNLDKGT	328	190	192	199	 $section
+element ShellNLDKGT	329	192	200	199	 $section
+element ShellNLDKGT	330	192	193	200	 $section
+element ShellNLDKGT	331	193	201	200	 $section
+element ShellNLDKGT	332	193	194	201	 $section
+element ShellNLDKGT	333	194	202	201	 $section
+element ShellNLDKGT	334	194	195	202	 $section
+element ShellNLDKGT	335	195	203	202	 $section
+element ShellNLDKGT	336	195	196	203	 $section
+element ShellNLDKGT	337	198	204	205	 $section
+element ShellNLDKGT	338	198	197	204	 $section
+element ShellNLDKGT	339	197	206	204	 $section
+element ShellNLDKGT	340	197	199	206	 $section
+element ShellNLDKGT	341	199	207	206	 $section
+element ShellNLDKGT	342	199	200	207	 $section
+element ShellNLDKGT	343	200	208	207	 $section
+element ShellNLDKGT	344	200	201	208	 $section
+element ShellNLDKGT	345	201	209	208	 $section
+element ShellNLDKGT	346	201	202	209	 $section
+element ShellNLDKGT	347	202	210	209	 $section
+element ShellNLDKGT	348	202	203	210	 $section
+element ShellNLDKGT	349	205	211	212	 $section
+element ShellNLDKGT	350	205	204	211	 $section
+element ShellNLDKGT	351	204	213	211	 $section
+element ShellNLDKGT	352	204	206	213	 $section
+element ShellNLDKGT	353	206	214	213	 $section
+element ShellNLDKGT	354	206	207	214	 $section
+element ShellNLDKGT	355	207	215	214	 $section
+element ShellNLDKGT	356	207	208	215	 $section
+element ShellNLDKGT	357	208	216	215	 $section
+element ShellNLDKGT	358	208	209	216	 $section
+element ShellNLDKGT	359	209	217	216	 $section
+element ShellNLDKGT	360	209	210	217	 $section
+
+
+pattern Plain 1 Linear { 
+	load 212 0 0 -0.33333 0 0 0
+	load 211 0 0 -0.66666 0 0 0
+	load 213 0 0 -0.66666 0 0 0
+	load 214 0 0 -0.66666 0 0 0
+	load 215 0 0 -0.66666 0 0 0
+	load 216 0 0 -0.66666 0 0 0
+	load 217 0 0 -0.33333 0 0 0
+}
+
+numberer Plain
+
+system BandGeneral
+
+constraints Plain
+
+test NormUnbalance 1e-3 50 2
+
+algorithm KrylovNewton  ;
+
+#define EQPath_Method_MRD 1 
+#define EQPath_Method_NP 2
+#define EQPath_Method_UNP 3
+#define EQPath_Method_CYL 4
+#define EQPath_Method_MNP 5
+#define EQPath_Method_GDC 6
+#define EQPath_Method_MUNP 7
+#define EQPath_Method_GMRD 9
+#define EQPath_Method_PEP 10
+
+set target_node_b 217
+set target_node_a 212
+
+recorder Node -file [pwd]\\outputs\\$target_node_a.txt  -time -node $target_node_a -dof 1 2 3 4 5 6 disp
+recorder Node -file [pwd]\\outputs\\$target_node_b.txt  -time -node $target_node_b -dof 1 2 3 4 5 6 disp
+
+set arc_length 0.2;
+set type 9;
+set over "node"
+
+
+integrator EQPath $arc_length $type element -dof 1 2 3 
+#integrator DisplacementControl 217 3 0.035
+
+analysis Static;
+
+puts "start"
+
+set i 0;
+set ret 0;
+set steps  5000;
+set fileID [open [pwd]\\outputs\\iterations.iter w]
+
+while {$ret==0 && [getTime] < 1.0} {
+	incr i
+	set ret [analyze 1];
+	puts  $fileID   "$i	[getTime]	[getCurrentIterations]	$ret"
+        puts "[expr [getTime]]"
+}
+flush  $fileID       // flush any output that has been buffered    
+close  $fileID       // close the file
+puts "done"
+#remove recorders

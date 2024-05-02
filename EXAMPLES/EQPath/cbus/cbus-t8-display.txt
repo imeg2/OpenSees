@@ -1,0 +1,114 @@
+wipe;
+model basic -ndm 3 -ndf 6;
+
+node	1	0	0	0
+node	2	1	0	0
+node	3	0	1	0
+node	4	1	1	0
+node	5	0	2	0
+node	6	1	2	0
+node	7	0	3	0
+node	8	1	3	0
+node	9	0	4	0
+node	10	1	4	0
+node	11	0	5	0
+node	12	1	5	0
+node	13	0	6	0
+node	14	1	6	0
+node	15	0	7	0
+node	16	1	7	0
+node	17	0	8	0
+node	18	1	8	0
+
+
+
+fix 1 1 1 1 1 1 1 
+fix 2 1 1 1 1 1 1 
+
+
+
+
+set isotropicMat 10
+set section 20
+set th 0.08
+set E 10e7
+set nu 0.0
+set rho 0;
+
+nDMaterial ElasticIsotropic 1 $E $nu
+nDMaterial PlateFiber 2 1
+section PlateFiber $section 2 $th
+
+
+element ShellNLDKGT		1	1	3	4	$section
+element ShellNLDKGT		2	1	4	2	$section
+element ShellNLDKGT		3	3	5	6	$section
+element ShellNLDKGT		4	3	6	4	$section
+element ShellNLDKGT		5	5	7	8	$section
+element ShellNLDKGT		6	5	8	6	$section
+element ShellNLDKGT		7	7	9	10	$section
+element ShellNLDKGT		8	7	10	8	$section
+element ShellNLDKGT		9	9	11	12	$section
+element ShellNLDKGT		10	9	12	10	$section
+element ShellNLDKGT		11	11	13	14	$section
+element ShellNLDKGT		12	11	14	12	$section
+element ShellNLDKGT		13	13	15	16	$section
+element ShellNLDKGT		14	13	16	14	$section
+element ShellNLDKGT		15	15	17	18	$section
+element ShellNLDKGT		16	15	18	16	$section
+
+
+pattern Plain 1 Linear { 
+	load 17 0 0 -0.5 0 0 0
+	load 18 0 0 -0.5 0 0 0
+}
+
+numberer Plain
+
+system BandGeneral
+
+constraints Plain
+
+test NormUnbalance 1e-3 50 2
+
+algorithm KrylovNewton  ;
+
+#define EQPath_Method_MRD 1 
+#define EQPath_Method_NP 2
+#define EQPath_Method_UNP 3
+#define EQPath_Method_CYL 4
+#define EQPath_Method_MNP 5
+#define EQPath_Method_GDC 6
+#define EQPath_Method_MUNP 7
+#define EQPath_Method_GMRD 9
+#define EQPath_Method_PEP 10
+set i 0;
+while {$i <= 18} {
+	incr i
+	recorder Node -file [pwd]\\outputs\\$i.txt  -time -node $i -dof 1 2 3 4 5 6 disp
+}
+
+
+
+integrator EQPath 0.2 9 element -dof 4 5 6
+
+
+analysis Static;
+
+puts "start"
+
+set i 0;
+set ret 0;
+set steps  10000;
+set fileID [open [pwd]\\outputs\\ite.iter w]
+
+while {$ret==0 && [nodeDisp 17 3] > -6} {
+	incr i
+	set ret [analyze 1];
+	puts  $fileID   "$i	[getTime]	[nodeDisp 17 3]	[getCurrentIterations]	$ret"
+        puts "[expr [getTime]] [expr [nodeDisp 17 3]]"
+}
+flush  $fileID       // flush any output that has been buffered    
+close  $fileID       // close the file
+puts "done"
+#remove recorders

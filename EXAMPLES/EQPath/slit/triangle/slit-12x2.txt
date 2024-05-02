@@ -1,0 +1,153 @@
+wipe;
+model basic -ndm 3 -ndf 6;
+
+node 1 6.0000 0.0000 0
+node 2 8.0000 0.0000 0
+node 3 6.9282 4.0000 0
+node 4 5.1962 3.0000 0
+node 5 10.0000 0.0000 0
+node 6 8.6603 5.0000 0
+node 7 4.0000 6.9282 0
+node 8 3.0000 5.1962 0
+node 9 5.0000 8.6603 0
+node 10 0.0000 8.0000 0
+node 11 0.0000 6.0000 0
+node 12 0.0000 10.0000 0
+node 13 -4.0000 6.9282 0
+node 14 -3.0000 5.1962 0
+node 15 -5.0000 8.6603 0
+node 16 -6.9282 4.0000 0
+node 17 -5.1962 3.0000 0
+node 18 -8.6603 5.0000 0
+node 19 -8.0000 0.0000 0
+node 20 -6.0000 0.0000 0
+node 21 -10.0000 0.0000 0
+node 22 -6.9282 -4.0000 0
+node 23 -5.1962 -3.0000 0
+node 24 -8.6603 -5.0000 0
+node 25 -4.0000 -6.9282 0
+node 26 -3.0000 -5.1962 0
+node 27 -5.0000 -8.6603 0
+node 28 0.0000 -8.0000 0
+node 29 0.0000 -6.0000 0
+node 30 0.0000 -10.0000 0
+node 31 4.0000 -6.9282 0
+node 32 3.0000 -5.1962 0
+node 33 5.0000 -8.6603 0
+node 34 6.9282 -4.0000 0
+node 35 5.1962 -3.0000 0
+node 36 8.6603 -5.0000 0
+node 37 8.0000 0.0000 0
+node 38 6.0000 0.0000 0
+node 39 10.0000 0.0000 0
+
+
+
+
+
+
+
+fix 1 1 1 1 1 1 1 
+fix 2 1 1 1 1 1 1 
+fix 5 1 1 1 1 1 1 
+
+
+
+set isotropicMat 10
+set section 20
+set th 0.03
+set E 21e6
+set nu 0.0
+set rho 0;
+
+nDMaterial ElasticIsotropic 1 $E $nu
+nDMaterial PlateFiber 2 1
+section PlateFiber $section 2 $th
+
+element ShellNLDKGQ	1	1	2	3	4	 $section
+element ShellNLDKGQ	2	2	5	6	3	 $section
+element ShellNLDKGQ	3	4	3	7	8	 $section
+element ShellNLDKGQ	4	3	6	9	7	 $section
+element ShellNLDKGQ	5	8	7	10	11	 $section
+element ShellNLDKGQ	6	7	9	12	10	 $section
+element ShellNLDKGQ	7	11	10	13	14	 $section
+element ShellNLDKGQ	8	10	12	15	13	 $section
+element ShellNLDKGQ	9	14	13	16	17	 $section
+element ShellNLDKGQ	10	13	15	18	16	 $section
+element ShellNLDKGQ	11	17	16	19	20	 $section
+element ShellNLDKGQ	12	16	18	21	19	 $section
+element ShellNLDKGQ	13	20	19	22	23	 $section
+element ShellNLDKGQ	14	19	21	24	22	 $section
+element ShellNLDKGQ	15	23	22	25	26	 $section
+element ShellNLDKGQ	16	22	24	27	25	 $section
+element ShellNLDKGQ	17	26	25	28	29	 $section
+element ShellNLDKGQ	18	25	27	30	28	 $section
+element ShellNLDKGQ	19	29	28	31	32	 $section
+element ShellNLDKGQ	20	28	30	33	31	 $section
+element ShellNLDKGQ	21	32	31	34	35	 $section
+element ShellNLDKGQ	22	31	33	36	34	 $section
+element ShellNLDKGQ	23	35	34	37	38	 $section
+element ShellNLDKGQ	24	34	36	39	37	 $section
+
+
+
+
+pattern Plain 1 Linear { 
+	load 38 0 0 0.25 0 0 0
+	load 37 0 0 0.5 0 0 0
+	load 39 0 0 0.25 0 0 0
+}
+
+numberer Plain
+
+system BandGeneral
+
+constraints Plain
+
+test NormUnbalance 1e-3 50 2
+
+algorithm KrylovNewton  ;
+
+#define EQPath_Method_MRD 1 
+#define EQPath_Method_NP 2
+#define EQPath_Method_UNP 3
+#define EQPath_Method_CYL 4
+#define EQPath_Method_MNP 5
+#define EQPath_Method_GDC 6
+#define EQPath_Method_MUNP 7
+#define EQPath_Method_GMRD 9
+#define EQPath_Method_PEP 10
+
+set target_node_b 38
+set target_node_a 39
+
+recorder Node -file [pwd]\\outputs\\$target_node_a.txt  -time -node $target_node_a -dof 1 2 3 4 5 6 disp
+recorder Node -file [pwd]\\outputs\\$target_node_b.txt  -time -node $target_node_b -dof 1 2 3 4 5 6 disp
+
+set arc_length 0.2;
+set type 9;
+set over "node"
+
+
+integrator EQPath $arc_length $type element -dof 1 2 3 
+#integrator DisplacementControl 217 3 0.035
+
+analysis Static;
+
+puts "start"
+
+set i 0;
+set ret 0;
+set steps  5000;
+set fileID [open [pwd]\\outputs\\iterations.iter w]
+
+while {$ret==0 && [getTime] < 1.0} {
+	incr i
+	set ret [analyze 1];
+	puts  $fileID   "$i	[getTime]	[getCurrentIterations]	$ret"
+        puts "[expr [getTime]]"
+}
+flush  $fileID       // flush any output that has been buffered    
+close  $fileID       // close the file
+puts "done"
+#remove recorders
