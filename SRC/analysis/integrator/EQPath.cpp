@@ -177,11 +177,11 @@ EQPath::update(const Vector &dU)
 	}
 
 	(*ur) = dU;
-
+	Vector* r = new Vector(theLinSOE->getNumEqn());
+	r->addVector(0, theLinSOE->getB(), 1.0);
 	theLinSOE->setB(*q);
 	theLinSOE->solve();
 	(*uq) = theLinSOE->getX();
-
 	double dLambda = 0;
 	iter++;
 
@@ -196,6 +196,20 @@ EQPath::update(const Vector &dU)
 
 		//opserr << "MRD  A:" << a << " B:" << b << endln;
 		dLambda = -a / b;
+	}
+	else if (type == EQPath_Method_MRW) // minimum residual work
+	{
+
+		double a = (*q) ^ (*ur);
+		double b = (*r) ^ (*uq);
+		double c = 2 * ((*q) ^ (*uq));
+		if (c == 0) {
+			opserr << "EQPath::update() - zero denominator\n";
+			return -1;
+		}
+
+		//opserr << "MRD  A:" << a << " B:" << b << endln;
+		dLambda = -(a + b) / c;
 	}
 	else if (type == EQPath_Method_NP) // normal plain
 	{
@@ -229,6 +243,39 @@ EQPath::update(const Vector &dU)
 		double delta = B * B - 4 * A * C;
 
 		dLambda = 0;
+		if (delta < 0)
+		{
+			opserr << "EQPath::update() - negetive denominator\n";
+			return -1;
+		}
+		else if (delta == 0)
+		{
+			dLambda = -B / 2 / A;
+		}
+		else
+		{
+			double sl1 = (-B + pow(delta, 0.5)) / 2 / A;
+			double sl2 = (-B - pow(delta, 0.5)) / 2 / A;
+			double aa1 = (*du) ^ (*ur);
+			double aa2 = (*du) ^ (*du);
+			double aa3 = (*du) ^ (*uq);
+			double costl1 = aa1 + aa2 + sl1 * aa3;
+			double costl2 = aa1 + aa2 + sl2 * aa3;
+			dLambda = sl1;
+			if (costl2 > costl1)
+				dLambda = sl2;
+		}
+
+	}
+	else if (type == EQPath_Method_ZRW) // cylindrical arc-length
+	{
+		double A = (*q) ^ (*uq);
+		double B = ((*q) ^ (*ur)) + ((*r) ^ (*uq));
+		double C = (*r) ^ (*ur);
+		double delta = B * B - 4 * A * C;
+
+		dLambda = 0;
+		if (delta < 0) delta = 0;
 		if (delta < 0)
 		{
 			opserr << "EQPath::update() - negetive denominator\n";

@@ -1,0 +1,616 @@
+wipe;
+model basic -ndm 3 -ndf 6;
+
+node 1 0 0 0
+node 2 2.5 0 0
+node 3 2.5 2.5 0
+node 4 0 2.5 0
+node 5 2.5 5 0
+node 6 0 5 0
+node 7 2.5 7.5 0
+node 8 0 7.5 0
+node 9 2.5 10 0
+node 10 0 10 0
+node 11 5 0 0
+node 12 5 2.5 0
+node 13 5 5 0
+node 14 5 7.5 0
+node 15 5 10 0
+node 16 7.5 0 0
+node 17 7.5 2.5 0
+node 18 7.5 5 0
+node 19 7.5 7.5 0
+node 20 7.5 10 0
+node 21 10 0 0
+node 22 10 2.5 0
+node 23 10 5 0
+node 24 10 7.5 0
+node 25 10 10 0
+node 26 12.5 0 0
+node 27 12.5 2.5 0
+node 28 12.5 5 0
+node 29 12.5 7.5 0
+node 30 12.5 10 0
+node 31 15 0 0
+node 32 15 2.5 0
+node 33 15 5 0
+node 34 15 7.5 0
+node 35 15 10 0
+node 36 17.5 0 0
+node 37 17.5 2.5 0
+node 38 17.5 5 0
+node 39 17.5 7.5 0
+node 40 17.5 10 0
+node 41 20 0 0
+node 42 20 2.5 0
+node 43 20 5 0
+node 44 20 7.5 0
+node 45 20 10 0
+node 46 22.5 0 0
+node 47 22.5 2.5 0
+node 48 22.5 5 0
+node 49 22.5 7.5 0
+node 50 22.5 10 0
+node 51 25 0 0
+node 52 25 2.5 0
+node 53 25 5 0
+node 54 25 7.5 0
+node 55 25 10 0
+node 56 27.5 0 0
+node 57 27.5 2.5 0
+node 58 27.5 5 0
+node 59 27.5 7.5 0
+node 60 27.5 10 0
+node 61 30 0 0
+node 62 30 2.5 0
+node 63 30 5 0
+node 64 30 7.5 0
+node 65 30 10 0
+node 66 32.5 0 0
+node 67 32.5 2.5 0
+node 68 32.5 5 0
+node 69 32.5 7.5 0
+node 70 32.5 10 0
+node 71 35 0 0
+node 72 35 2.5 0
+node 73 35 5 0
+node 74 35 7.5 0
+node 75 35 10 0
+node 76 37.5 0 0
+node 77 37.5 2.5 0
+node 78 37.5 5 0
+node 79 37.5 7.5 0
+node 80 37.5 10 0
+node 81 40 0 0
+node 82 40 2.5 0
+node 83 40 5 0
+node 84 40 7.5 0
+node 85 40 10 0
+node 86 42.5 0 0
+node 87 42.5 2.5 0
+node 88 42.5 5 0
+node 89 42.5 7.5 0
+node 90 42.5 10 0
+node 91 45 0 0
+node 92 45 2.5 0
+node 93 45 5 0
+node 94 45 7.5 0
+node 95 45 10 0
+node 96 47.5 0 0
+node 97 47.5 2.5 0
+node 98 47.5 5 0
+node 99 47.5 7.5 0
+node 100 47.5 10 0
+node 101 50 0 0
+node 102 50 2.5 0
+node 103 50 5 0
+node 104 50 7.5 0
+node 105 50 10 0
+node 106 52.5 0 0
+node 107 52.5 2.5 0
+node 108 52.5 5 0
+node 109 52.5 7.5 0
+node 110 52.5 10 0
+node 111 55 0 0
+node 112 55 2.5 0
+node 113 55 5 0
+node 114 55 7.5 0
+node 115 55 10 0
+node 116 57.5 0 0
+node 117 57.5 2.5 0
+node 118 57.5 5 0
+node 119 57.5 7.5 0
+node 120 57.5 10 0
+node 121 60 0 0
+node 122 60 2.5 0
+node 123 60 5 0
+node 124 60 7.5 0
+node 125 60 10 0
+node 126 62.5 0 0
+node 127 62.5 2.5 0
+node 128 62.5 5 0
+node 129 62.5 7.5 0
+node 130 62.5 10 0
+node 131 65 0 0
+node 132 65 2.5 0
+node 133 65 5 0
+node 134 65 7.5 0
+node 135 65 10 0
+node 136 67.5 0 0
+node 137 67.5 2.5 0
+node 138 67.5 5 0
+node 139 67.5 7.5 0
+node 140 67.5 10 0
+node 141 70 0 0
+node 142 70 2.5 0
+node 143 70 5 0
+node 144 70 7.5 0
+node 145 70 10 0
+node 146 72.5 0 0
+node 147 72.5 2.5 0
+node 148 72.5 5 0
+node 149 72.5 7.5 0
+node 150 72.5 10 0
+node 151 75 0 0
+node 152 75 2.5 0
+node 153 75 5 0
+node 154 75 7.5 0
+node 155 75 10 0
+node 156 77.5 0 0
+node 157 77.5 2.5 0
+node 158 77.5 5 0
+node 159 77.5 7.5 0
+node 160 77.5 10 0
+node 161 80 0 0
+node 162 80 2.5 0
+node 163 80 5 0
+node 164 80 7.5 0
+node 165 80 10 0
+node 166 82.5 0 0
+node 167 82.5 2.5 0
+node 168 82.5 5 0
+node 169 82.5 7.5 0
+node 170 82.5 10 0
+node 171 85 0 0
+node 172 85 2.5 0
+node 173 85 5 0
+node 174 85 7.5 0
+node 175 85 10 0
+node 176 87.5 0 0
+node 177 87.5 2.5 0
+node 178 87.5 5 0
+node 179 87.5 7.5 0
+node 180 87.5 10 0
+node 181 90 0 0
+node 182 90 2.5 0
+node 183 90 5 0
+node 184 90 7.5 0
+node 185 90 10 0
+node 186 92.5 0 0
+node 187 92.5 2.5 0
+node 188 92.5 5 0
+node 189 92.5 7.5 0
+node 190 92.5 10 0
+node 191 95 0 0
+node 192 95 2.5 0
+node 193 95 5 0
+node 194 95 7.5 0
+node 195 95 10 0
+node 196 97.5 0 0
+node 197 97.5 2.5 0
+node 198 97.5 5 0
+node 199 97.5 7.5 0
+node 200 97.5 10 0
+node 201 100 0 0
+node 202 100 2.5 0
+node 203 100 5 0
+node 204 100 7.5 0
+node 205 100 10 0
+
+fix 1 1 1 1 0 0 0 
+fix 4 1 1 1 0 0 0
+fix 6 1 1 1 0 0 0
+fix 8 1 1 1 0 0 0 
+fix 10 1 1 1 0 0 0
+
+fix 201 0 1 1 0 0 0 
+fix 202 0 1 1 0 0 0
+fix 203 0 1 1 0 0 0
+fix 204 0 1 1 0 0 0 
+fix 205 0 1 1 0 0 0
+
+
+set isotropicMat 10
+set section 20
+set th 1
+set E 1000
+set nu 0.0
+set rho 0;
+
+nDMaterial ElasticIsotropic 1 $E $nu
+nDMaterial PlateFiber 2 1
+section PlateFiber $section 2 $th
+
+
+element ShellNLDKGT	1	1	3	4	 $section
+element ShellNLDKGT	2	1	2	3	 $section
+element ShellNLDKGT	3	4	5	6	 $section
+element ShellNLDKGT	4	4	3	5	 $section
+element ShellNLDKGT	5	6	7	8	 $section
+element ShellNLDKGT	6	6	5	7	 $section
+element ShellNLDKGT	7	8	9	10	 $section
+element ShellNLDKGT	8	8	7	9	 $section
+element ShellNLDKGT	9	1	12	4	 $section
+element ShellNLDKGT	10	1	11	12	 $section
+element ShellNLDKGT	11	4	13	6	 $section
+element ShellNLDKGT	12	4	12	13	 $section
+element ShellNLDKGT	13	6	14	8	 $section
+element ShellNLDKGT	14	6	13	14	 $section
+element ShellNLDKGT	15	8	15	10	 $section
+element ShellNLDKGT	16	8	14	15	 $section
+element ShellNLDKGT	17	1	17	4	 $section
+element ShellNLDKGT	18	1	16	17	 $section
+element ShellNLDKGT	19	4	18	6	 $section
+element ShellNLDKGT	20	4	17	18	 $section
+element ShellNLDKGT	21	6	19	8	 $section
+element ShellNLDKGT	22	6	18	19	 $section
+element ShellNLDKGT	23	8	20	10	 $section
+element ShellNLDKGT	24	8	19	20	 $section
+element ShellNLDKGT	25	1	22	4	 $section
+element ShellNLDKGT	26	1	21	22	 $section
+element ShellNLDKGT	27	4	23	6	 $section
+element ShellNLDKGT	28	4	22	23	 $section
+element ShellNLDKGT	29	6	24	8	 $section
+element ShellNLDKGT	30	6	23	24	 $section
+element ShellNLDKGT	31	8	25	10	 $section
+element ShellNLDKGT	32	8	24	25	 $section
+element ShellNLDKGT	33	1	27	4	 $section
+element ShellNLDKGT	34	1	26	27	 $section
+element ShellNLDKGT	35	4	28	6	 $section
+element ShellNLDKGT	36	4	27	28	 $section
+element ShellNLDKGT	37	6	29	8	 $section
+element ShellNLDKGT	38	6	28	29	 $section
+element ShellNLDKGT	39	8	30	10	 $section
+element ShellNLDKGT	40	8	29	30	 $section
+element ShellNLDKGT	41	1	32	4	 $section
+element ShellNLDKGT	42	1	31	32	 $section
+element ShellNLDKGT	43	4	33	6	 $section
+element ShellNLDKGT	44	4	32	33	 $section
+element ShellNLDKGT	45	6	34	8	 $section
+element ShellNLDKGT	46	6	33	34	 $section
+element ShellNLDKGT	47	8	35	10	 $section
+element ShellNLDKGT	48	8	34	35	 $section
+element ShellNLDKGT	49	1	37	4	 $section
+element ShellNLDKGT	50	1	36	37	 $section
+element ShellNLDKGT	51	4	38	6	 $section
+element ShellNLDKGT	52	4	37	38	 $section
+element ShellNLDKGT	53	6	39	8	 $section
+element ShellNLDKGT	54	6	38	39	 $section
+element ShellNLDKGT	55	8	40	10	 $section
+element ShellNLDKGT	56	8	39	40	 $section
+element ShellNLDKGT	57	1	42	4	 $section
+element ShellNLDKGT	58	1	41	42	 $section
+element ShellNLDKGT	59	4	43	6	 $section
+element ShellNLDKGT	60	4	42	43	 $section
+element ShellNLDKGT	61	6	44	8	 $section
+element ShellNLDKGT	62	6	43	44	 $section
+element ShellNLDKGT	63	8	45	10	 $section
+element ShellNLDKGT	64	8	44	45	 $section
+element ShellNLDKGT	65	1	47	4	 $section
+element ShellNLDKGT	66	1	46	47	 $section
+element ShellNLDKGT	67	4	48	6	 $section
+element ShellNLDKGT	68	4	47	48	 $section
+element ShellNLDKGT	69	6	49	8	 $section
+element ShellNLDKGT	70	6	48	49	 $section
+element ShellNLDKGT	71	8	50	10	 $section
+element ShellNLDKGT	72	8	49	50	 $section
+element ShellNLDKGT	73	1	52	4	 $section
+element ShellNLDKGT	74	1	51	52	 $section
+element ShellNLDKGT	75	4	53	6	 $section
+element ShellNLDKGT	76	4	52	53	 $section
+element ShellNLDKGT	77	6	54	8	 $section
+element ShellNLDKGT	78	6	53	54	 $section
+element ShellNLDKGT	79	8	55	10	 $section
+element ShellNLDKGT	80	8	54	55	 $section
+element ShellNLDKGT	81	1	57	4	 $section
+element ShellNLDKGT	82	1	56	57	 $section
+element ShellNLDKGT	83	4	58	6	 $section
+element ShellNLDKGT	84	4	57	58	 $section
+element ShellNLDKGT	85	6	59	8	 $section
+element ShellNLDKGT	86	6	58	59	 $section
+element ShellNLDKGT	87	8	60	10	 $section
+element ShellNLDKGT	88	8	59	60	 $section
+element ShellNLDKGT	89	1	62	4	 $section
+element ShellNLDKGT	90	1	61	62	 $section
+element ShellNLDKGT	91	4	63	6	 $section
+element ShellNLDKGT	92	4	62	63	 $section
+element ShellNLDKGT	93	6	64	8	 $section
+element ShellNLDKGT	94	6	63	64	 $section
+element ShellNLDKGT	95	8	65	10	 $section
+element ShellNLDKGT	96	8	64	65	 $section
+element ShellNLDKGT	97	1	67	4	 $section
+element ShellNLDKGT	98	1	66	67	 $section
+element ShellNLDKGT	99	4	68	6	 $section
+element ShellNLDKGT	100	4	67	68	 $section
+element ShellNLDKGT	101	6	69	8	 $section
+element ShellNLDKGT	102	6	68	69	 $section
+element ShellNLDKGT	103	8	70	10	 $section
+element ShellNLDKGT	104	8	69	70	 $section
+element ShellNLDKGT	105	1	72	4	 $section
+element ShellNLDKGT	106	1	71	72	 $section
+element ShellNLDKGT	107	4	73	6	 $section
+element ShellNLDKGT	108	4	72	73	 $section
+element ShellNLDKGT	109	6	74	8	 $section
+element ShellNLDKGT	110	6	73	74	 $section
+element ShellNLDKGT	111	8	75	10	 $section
+element ShellNLDKGT	112	8	74	75	 $section
+element ShellNLDKGT	113	1	77	4	 $section
+element ShellNLDKGT	114	1	76	77	 $section
+element ShellNLDKGT	115	4	78	6	 $section
+element ShellNLDKGT	116	4	77	78	 $section
+element ShellNLDKGT	117	6	79	8	 $section
+element ShellNLDKGT	118	6	78	79	 $section
+element ShellNLDKGT	119	8	80	10	 $section
+element ShellNLDKGT	120	8	79	80	 $section
+element ShellNLDKGT	121	1	82	4	 $section
+element ShellNLDKGT	122	1	81	82	 $section
+element ShellNLDKGT	123	4	83	6	 $section
+element ShellNLDKGT	124	4	82	83	 $section
+element ShellNLDKGT	125	6	84	8	 $section
+element ShellNLDKGT	126	6	83	84	 $section
+element ShellNLDKGT	127	8	85	10	 $section
+element ShellNLDKGT	128	8	84	85	 $section
+element ShellNLDKGT	129	1	87	4	 $section
+element ShellNLDKGT	130	1	86	87	 $section
+element ShellNLDKGT	131	4	88	6	 $section
+element ShellNLDKGT	132	4	87	88	 $section
+element ShellNLDKGT	133	6	89	8	 $section
+element ShellNLDKGT	134	6	88	89	 $section
+element ShellNLDKGT	135	8	90	10	 $section
+element ShellNLDKGT	136	8	89	90	 $section
+element ShellNLDKGT	137	1	92	4	 $section
+element ShellNLDKGT	138	1	91	92	 $section
+element ShellNLDKGT	139	4	93	6	 $section
+element ShellNLDKGT	140	4	92	93	 $section
+element ShellNLDKGT	141	6	94	8	 $section
+element ShellNLDKGT	142	6	93	94	 $section
+element ShellNLDKGT	143	8	95	10	 $section
+element ShellNLDKGT	144	8	94	95	 $section
+element ShellNLDKGT	145	1	97	4	 $section
+element ShellNLDKGT	146	1	96	97	 $section
+element ShellNLDKGT	147	4	98	6	 $section
+element ShellNLDKGT	148	4	97	98	 $section
+element ShellNLDKGT	149	6	99	8	 $section
+element ShellNLDKGT	150	6	98	99	 $section
+element ShellNLDKGT	151	8	100	10	 $section
+element ShellNLDKGT	152	8	99	100	 $section
+element ShellNLDKGT	153	1	102	4	 $section
+element ShellNLDKGT	154	1	101	102	 $section
+element ShellNLDKGT	155	4	103	6	 $section
+element ShellNLDKGT	156	4	102	103	 $section
+element ShellNLDKGT	157	6	104	8	 $section
+element ShellNLDKGT	158	6	103	104	 $section
+element ShellNLDKGT	159	8	105	10	 $section
+element ShellNLDKGT	160	8	104	105	 $section
+element ShellNLDKGT	161	1	107	4	 $section
+element ShellNLDKGT	162	1	106	107	 $section
+element ShellNLDKGT	163	4	108	6	 $section
+element ShellNLDKGT	164	4	107	108	 $section
+element ShellNLDKGT	165	6	109	8	 $section
+element ShellNLDKGT	166	6	108	109	 $section
+element ShellNLDKGT	167	8	110	10	 $section
+element ShellNLDKGT	168	8	109	110	 $section
+element ShellNLDKGT	169	1	112	4	 $section
+element ShellNLDKGT	170	1	111	112	 $section
+element ShellNLDKGT	171	4	113	6	 $section
+element ShellNLDKGT	172	4	112	113	 $section
+element ShellNLDKGT	173	6	114	8	 $section
+element ShellNLDKGT	174	6	113	114	 $section
+element ShellNLDKGT	175	8	115	10	 $section
+element ShellNLDKGT	176	8	114	115	 $section
+element ShellNLDKGT	177	1	117	4	 $section
+element ShellNLDKGT	178	1	116	117	 $section
+element ShellNLDKGT	179	4	118	6	 $section
+element ShellNLDKGT	180	4	117	118	 $section
+element ShellNLDKGT	181	6	119	8	 $section
+element ShellNLDKGT	182	6	118	119	 $section
+element ShellNLDKGT	183	8	120	10	 $section
+element ShellNLDKGT	184	8	119	120	 $section
+element ShellNLDKGT	185	1	122	4	 $section
+element ShellNLDKGT	186	1	121	122	 $section
+element ShellNLDKGT	187	4	123	6	 $section
+element ShellNLDKGT	188	4	122	123	 $section
+element ShellNLDKGT	189	6	124	8	 $section
+element ShellNLDKGT	190	6	123	124	 $section
+element ShellNLDKGT	191	8	125	10	 $section
+element ShellNLDKGT	192	8	124	125	 $section
+element ShellNLDKGT	193	1	127	4	 $section
+element ShellNLDKGT	194	1	126	127	 $section
+element ShellNLDKGT	195	4	128	6	 $section
+element ShellNLDKGT	196	4	127	128	 $section
+element ShellNLDKGT	197	6	129	8	 $section
+element ShellNLDKGT	198	6	128	129	 $section
+element ShellNLDKGT	199	8	130	10	 $section
+element ShellNLDKGT	200	8	129	130	 $section
+element ShellNLDKGT	201	1	132	4	 $section
+element ShellNLDKGT	202	1	131	132	 $section
+element ShellNLDKGT	203	4	133	6	 $section
+element ShellNLDKGT	204	4	132	133	 $section
+element ShellNLDKGT	205	6	134	8	 $section
+element ShellNLDKGT	206	6	133	134	 $section
+element ShellNLDKGT	207	8	135	10	 $section
+element ShellNLDKGT	208	8	134	135	 $section
+element ShellNLDKGT	209	1	137	4	 $section
+element ShellNLDKGT	210	1	136	137	 $section
+element ShellNLDKGT	211	4	138	6	 $section
+element ShellNLDKGT	212	4	137	138	 $section
+element ShellNLDKGT	213	6	139	8	 $section
+element ShellNLDKGT	214	6	138	139	 $section
+element ShellNLDKGT	215	8	140	10	 $section
+element ShellNLDKGT	216	8	139	140	 $section
+element ShellNLDKGT	217	1	142	4	 $section
+element ShellNLDKGT	218	1	141	142	 $section
+element ShellNLDKGT	219	4	143	6	 $section
+element ShellNLDKGT	220	4	142	143	 $section
+element ShellNLDKGT	221	6	144	8	 $section
+element ShellNLDKGT	222	6	143	144	 $section
+element ShellNLDKGT	223	8	145	10	 $section
+element ShellNLDKGT	224	8	144	145	 $section
+element ShellNLDKGT	225	1	147	4	 $section
+element ShellNLDKGT	226	1	146	147	 $section
+element ShellNLDKGT	227	4	148	6	 $section
+element ShellNLDKGT	228	4	147	148	 $section
+element ShellNLDKGT	229	6	149	8	 $section
+element ShellNLDKGT	230	6	148	149	 $section
+element ShellNLDKGT	231	8	150	10	 $section
+element ShellNLDKGT	232	8	149	150	 $section
+element ShellNLDKGT	233	1	152	4	 $section
+element ShellNLDKGT	234	1	151	152	 $section
+element ShellNLDKGT	235	4	153	6	 $section
+element ShellNLDKGT	236	4	152	153	 $section
+element ShellNLDKGT	237	6	154	8	 $section
+element ShellNLDKGT	238	6	153	154	 $section
+element ShellNLDKGT	239	8	155	10	 $section
+element ShellNLDKGT	240	8	154	155	 $section
+element ShellNLDKGT	241	1	157	4	 $section
+element ShellNLDKGT	242	1	156	157	 $section
+element ShellNLDKGT	243	4	158	6	 $section
+element ShellNLDKGT	244	4	157	158	 $section
+element ShellNLDKGT	245	6	159	8	 $section
+element ShellNLDKGT	246	6	158	159	 $section
+element ShellNLDKGT	247	8	160	10	 $section
+element ShellNLDKGT	248	8	159	160	 $section
+element ShellNLDKGT	249	1	162	4	 $section
+element ShellNLDKGT	250	1	161	162	 $section
+element ShellNLDKGT	251	4	163	6	 $section
+element ShellNLDKGT	252	4	162	163	 $section
+element ShellNLDKGT	253	6	164	8	 $section
+element ShellNLDKGT	254	6	163	164	 $section
+element ShellNLDKGT	255	8	165	10	 $section
+element ShellNLDKGT	256	8	164	165	 $section
+element ShellNLDKGT	257	1	167	4	 $section
+element ShellNLDKGT	258	1	166	167	 $section
+element ShellNLDKGT	259	4	168	6	 $section
+element ShellNLDKGT	260	4	167	168	 $section
+element ShellNLDKGT	261	6	169	8	 $section
+element ShellNLDKGT	262	6	168	169	 $section
+element ShellNLDKGT	263	8	170	10	 $section
+element ShellNLDKGT	264	8	169	170	 $section
+element ShellNLDKGT	265	1	172	4	 $section
+element ShellNLDKGT	266	1	171	172	 $section
+element ShellNLDKGT	267	4	173	6	 $section
+element ShellNLDKGT	268	4	172	173	 $section
+element ShellNLDKGT	269	6	174	8	 $section
+element ShellNLDKGT	270	6	173	174	 $section
+element ShellNLDKGT	271	8	175	10	 $section
+element ShellNLDKGT	272	8	174	175	 $section
+element ShellNLDKGT	273	1	177	4	 $section
+element ShellNLDKGT	274	1	176	177	 $section
+element ShellNLDKGT	275	4	178	6	 $section
+element ShellNLDKGT	276	4	177	178	 $section
+element ShellNLDKGT	277	6	179	8	 $section
+element ShellNLDKGT	278	6	178	179	 $section
+element ShellNLDKGT	279	8	180	10	 $section
+element ShellNLDKGT	280	8	179	180	 $section
+element ShellNLDKGT	281	1	182	4	 $section
+element ShellNLDKGT	282	1	181	182	 $section
+element ShellNLDKGT	283	4	183	6	 $section
+element ShellNLDKGT	284	4	182	183	 $section
+element ShellNLDKGT	285	6	184	8	 $section
+element ShellNLDKGT	286	6	183	184	 $section
+element ShellNLDKGT	287	8	185	10	 $section
+element ShellNLDKGT	288	8	184	185	 $section
+element ShellNLDKGT	289	1	187	4	 $section
+element ShellNLDKGT	290	1	186	187	 $section
+element ShellNLDKGT	291	4	188	6	 $section
+element ShellNLDKGT	292	4	187	188	 $section
+element ShellNLDKGT	293	6	189	8	 $section
+element ShellNLDKGT	294	6	188	189	 $section
+element ShellNLDKGT	295	8	190	10	 $section
+element ShellNLDKGT	296	8	189	190	 $section
+element ShellNLDKGT	297	1	192	4	 $section
+element ShellNLDKGT	298	1	191	192	 $section
+element ShellNLDKGT	299	4	193	6	 $section
+element ShellNLDKGT	300	4	192	193	 $section
+element ShellNLDKGT	301	6	194	8	 $section
+element ShellNLDKGT	302	6	193	194	 $section
+element ShellNLDKGT	303	8	195	10	 $section
+element ShellNLDKGT	304	8	194	195	 $section
+element ShellNLDKGT	305	1	197	4	 $section
+element ShellNLDKGT	306	1	196	197	 $section
+element ShellNLDKGT	307	4	198	6	 $section
+element ShellNLDKGT	308	4	197	198	 $section
+element ShellNLDKGT	309	6	199	8	 $section
+element ShellNLDKGT	310	6	198	199	 $section
+element ShellNLDKGT	311	8	200	10	 $section
+element ShellNLDKGT	312	8	199	200	 $section
+element ShellNLDKGT	313	1	202	4	 $section
+element ShellNLDKGT	314	1	201	202	 $section
+element ShellNLDKGT	315	4	203	6	 $section
+element ShellNLDKGT	316	4	202	203	 $section
+element ShellNLDKGT	317	6	204	8	 $section
+element ShellNLDKGT	318	6	203	204	 $section
+element ShellNLDKGT	319	8	205	10	 $section
+element ShellNLDKGT	320	8	204	205	 $section
+
+
+
+
+pattern Plain 1 Linear { 
+	load 201 -0.125 0 0 0 0 0
+	load 202 -0.25 0 0 0 0 0
+	load 203 -0.25 0 0 0 0 0
+	load 204 -0.25 0 0 0 0 0
+	load 205 -0.125 0 0 0 0 0
+
+	load 101 0 0 -0.001 0 0 0
+	load 102 0 0 -0.001 0 0 0
+	load 103 0 0 -0.001 0 0 0
+	load 104 0 0 -0.001 0 0 0
+	load 105 0 0 -0.001 0 0 0
+}
+
+numberer Plain
+
+system BandGeneral
+
+constraints Plain
+
+test NormUnbalance 1e-3 50 2
+
+algorithm KrylovNewton  ;
+
+#define EQPath_Method_MRD 1 
+#define EQPath_Method_NP 2
+#define EQPath_Method_UNP 3
+#define EQPath_Method_CYL 4
+#define EQPath_Method_MNP 5
+#define EQPath_Method_GDC 6
+#define EQPath_Method_MUNP 7
+#define EQPath_Method_GMRD 9
+#define EQPath_Method_PEP 10
+
+recorder Node -file [pwd]\\outputs\\disps.txt  -time -node 203 103 -dof 1 2 3 4 5 6 disp
+
+integrator EQPath 1.0 9 node -dof 4 5 6
+
+
+analysis Static;
+
+puts "start"
+
+set i 0;
+set ret 0;
+set steps  10000;
+set fileID [open [pwd]\\outputs\\iterations.iter w]
+
+while {$ret==0} {
+	incr i
+	set ret [analyze 1];
+	puts  $fileID   "$i	[getCurrentIterations]	$ret"
+        puts "[expr [getTime]] [expr [nodeDisp 203 1]]"
+}
+flush  $fileID       // flush any output that has been buffered    
+close  $fileID       // close the file
+puts "done"
+#remove recorders

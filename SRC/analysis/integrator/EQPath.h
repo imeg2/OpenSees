@@ -75,6 +75,8 @@ class TaggedObject;
 #define EQPath_Method_MGDC 8
 #define EQPath_Method_GMRD 9
 #define EQPath_Method_PEP 10
+#define EQPath_Method_MRW 11 
+#define EQPath_Method_ZRW 12 
 
 class EQPath : public StaticIntegrator
 {
